@@ -1,0 +1,267 @@
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;  
+    background-color: #fafafa;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* ========Page===========
+========================== */
+.page {
+    position: relative;
+    width: 100%;
+    max-width: 1140px;
+
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* ========Section===========
+========================== */
+
+.section__title {
+    margin: 50px auto 20px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ab3b69;
+}
+
+/*======== Student======
+======================== */
+.student {
+    display: flex;
+    flex-direction: column;
+}
+
+.student__title {
+    margin: 40px auto 30px;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+    color: #ab3b69;
+}
+
+.student__info {
+    display: flex;
+}
+
+.student__info_img {
+    min-width: 320px;
+    margin-right: 30px;
+}
+
+.student__info_photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.student__info_col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.student__info_row {
+    margin-bottom: 25px;
+}
+
+.student__info_title {
+    font-size: 15px;
+}
+
+.student__info_descr {
+    font-weight: 700;
+}
+
+/* =======Purposes=====
+======================= */
+.purposes__wrapper {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+
+/* =======Timetable=====
+======================= */
+
+.timetable__list {
+    margin: 0 auto;
+
+    max-width: 300px;
+}
+
+.timetable__list_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* =======Courses=====
+======================= */
+.courses__list {
+    margin: 0 auto;
+    max-width: 600px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.courses__col {
+    text-align: center;
+}
+
+.courses__title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.courses__title::after{
+    content: "";
+    bottom: -2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+}
+
+/* =======Contacts=====
+======================= */
+
+.contacts__wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.contact__item {
+    margin-right: 20px;
+    text-align: center;
+}
+
+.contact__item:last-child {
+    margin-right: 0;
+}
+
+.contact__title {
+    margin-bottom: 7px;
+}
+
+.contact__icon {
+    border-radius: 100%;
+    transition: .2s all linear;
+}
+.contact__icon:hover {
+    box-shadow: #f5576c 0px 54px 55px, #f093fb 0px -12px 30px, #f5576c 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, #f093fb 0px -3px 5px;
+}
+
+/* =========Circle====
+====================== */
+.circle {
+    width: 450px;
+    height: 450px;
+
+    background: linear-gradient(to bottom, #f5576c, #f093fb);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .15);
+    border-radius: 60% 40% 49% 51% / 58% 45% 55% 42%;
+
+    animation: circleRadius 18s alternate infinite;
+
+    position: absolute;
+    right: 0;
+    top: 150px;
+    z-index: -2;
+
+    @media(max-width: 1330px) {
+        right: 0;
+    }
+}
+
+@keyframes circleRadius {
+    0% {
+        border-radius: 60% 40% 49% 51% / 58% 45% 55% 42%;
+        transform: translate3d(0, 0, 0);
+    }
+    25% {
+        border-radius: 64% 36% 61% 39% / 79% 65% 35% 21%;
+        transform: translate3d(-50px, 100px, 0);
+    }
+    50% {
+        border-radius: 64% 36% 61% 39% / 79% 65% 35% 21%;
+        transform: translate3d(-150px, 300px, 0);
+    }
+    75% {
+        border-radius: 64% 36% 61% 39% / 79% 65% 35% 21%;
+        transform: translate3d(-250px, 500px, 0);
+    }
+    100% {
+        border-radius: 27% 73% 36% 64% / 51% 63% 37% 49%;
+        transform: translate3d(0, 500px, 0);
+    }
+}
+
+/* ==========Media====
+======================= */
+@media (max-width: 768px) {
+
+    body {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .student__title {
+        font-size: 32px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    body {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .student__title {
+        margin: 20px auto 15px;
+        font-size: 24px;
+    }
+
+    .student__info {
+        flex-direction: column;
+        text-align: center;
+    }
+    .student__info_row {
+        margin-bottom: 15px;
+    }
+
+    .student__info_img {
+        min-width: 300px;
+        margin-right: 0;
+    }
+    
+    .section__title {
+        margin: 30px auto 15px;
+        font-size: 18px;
+    }
+
+    .courses__list {
+        font-size: 11px;
+    }
+    
+}
